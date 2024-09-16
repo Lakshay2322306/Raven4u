@@ -1,24 +1,31 @@
-# My Bot
+# Bot API
 
-This is a simple bot that provides various functionalities such as generating fake data, checking BIN details, and more.
+## Description
+This bot API allows you to interact with various commands, including generating fake data and getting BIN details.
 
-## Deployment
+## Setup
 
-This bot is hosted on Vercel. Ensure you have the following files in your project:
+1. **Environment Variables**
 
-- `api/index.py`: Entry point for the bot.
-- `requirements.txt`: Lists required Python packages.
-- `vercel.json`: Vercel configuration file.
+   Set up the following environment variables in Vercel:
+
+   - `OWNER_ID` - Your bot owner ID
+   - `OWNER_USERNAME` - Your bot owner's username
+   - `BOT_TOKEN` - Your bot's token
+
+2. **Deploying**
+
+   To deploy, ensure that your project structure matches the provided layout and push to a Git repository. Connect this repository to Vercel and deploy.
 
 ## Commands
 
 - `/start`: Welcome message
-- `/help`: List of commands
+- `/help`: Show available commands
 - `/ping`: Check if the bot is online
 - `/ipgen`: Generate fake IP addresses
 - `/faker`: Generate fake details
-- `/bin [BIN]`: Get details for a BIN number
+- `/bin <bin_number>`: Get details from BIN
 - `/credits`: Show bot and owner information
-- `/admin`: Admin-only commands
-- `/shutdown`: Shut down the bot
-- `/status`: Check bot status
+- `/admin`: Admin-only commands (owner)
+- `/shutdown`: Shut down the bot (admin only)
+- `/status`: Check bot status (admin only)
