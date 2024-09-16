@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: my-telegram-bot
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    plan: free
+    envVars:
+      - key: OWNER_ID
+        value: "YOUR_OWNER_ID"
+      - key: OWNER_USERNAME
+        value: "your_owner_username"
+      - key: BOT_TOKEN
+        value: "your_telegram_bot_token"
