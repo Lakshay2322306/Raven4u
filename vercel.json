@@ -1,15 +1,14 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "api/index.py",
-      "use": "@vercel/python"
-    }
+    { "src": "api/bot.py", "use": "@vercel/python" }
   ],
   "routes": [
-    {
-      "src": "/",
-      "dest": "api/index.py"
-    }
-  ]
+    { "src": "/(.*)", "dest": "api/bot.py" }
+  ],
+  "env": {
+    "OWNER_ID": "@owner_id",
+    "OWNER_USERNAME": "@owner_username",
+    "BOT_TOKEN": "@bot_token"
+  }
 }
