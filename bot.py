@@ -1,17 +1,17 @@
-from flask import Flask, request, jsonify
 import os
 import re
 import requests
 from faker import Faker
 import random
 import pycountry
+from flask import Flask, request, jsonify
 
-# Initialize Flask app
 app = Flask(__name__)
 
 # Load environment variables
 owner_id = os.getenv("OWNER_ID", "123456789")
 owner_username = os.getenv("OWNER_USERNAME", "BotOwner")
+bot_token = os.getenv("BOT_TOKEN")
 
 faker = Faker()
 
